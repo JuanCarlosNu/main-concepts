@@ -6,6 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const element = <h1>Hello World!!</h1>;
-
+function tick(){
+  const element= (
+  <div>
+    <h1>Hello, World !</h1>
+    <h2>it is{new Date().toLocaleTimeString()}</h2>
+  </div>);
 root.render(element);
+}
+
+setInterval(tick, 1000);
+
