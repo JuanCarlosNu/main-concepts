@@ -6,14 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-function tick(){
-  const element= (
-  <div>
-    <h1>Hello, World !</h1>
-    <h2>it is{new Date().toLocaleTimeString()}</h2>
-  </div>);
+//When React sees an element representing a user-defined component(welcome),
+// it passes JSX attributes(sarita) and children(hello, {props.name}) to this component(element), as a single object. 
+//    We call this object “props”.
+
+
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+  const element = <Welcome name="Sarita" />
+
 root.render(element);
-}
-
-setInterval(tick, 1000);
-
